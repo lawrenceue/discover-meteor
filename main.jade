@@ -1,0 +1,20 @@
+body
+  br
+  br
+  br
+  +theInput
+
+
+
+template(name="theInput")
+  .col-lg-3
+  .container.col-lg-6
+    .input-group.input-group-lg
+      span#sizing-addon1.input-group-addon Input
+      textarea#theCode.form-control(rows="3", name='theCode', type='textarea', placeholder='Code', aria-describedby='sizing-addon1')
+    +theWell
+
+
+
+template(name="theWell")
+    .well.well-lg.wellTall
