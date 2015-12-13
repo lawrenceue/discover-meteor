@@ -12,9 +12,4 @@ template(name="theInput")
     .input-group.input-group-lg
       span#sizing-addon1.input-group-addon Input
       textarea#theCode.form-control(rows="3", name='theCode', type='textarea', placeholder='Code', aria-describedby='sizing-addon1')
-    +theWell
-
-
-
-template(name="theWell")
-    .well.well-lg.wellTall
+    .well.well-lg.wellTall #{axe}
