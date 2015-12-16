@@ -1,15 +1,24 @@
 body
-  br
-  br
-  br
+  +theHeader
   +theInput
-
+  +theReplacer
 
 
 template(name="theInput")
-  .col-lg-3
-  .container.col-lg-6
-    .input-group.input-group-lg
-      textarea#theCode.form-control(rows="3", columns="50", name='theCode', type='textarea', placeholder='Input')
-    .input-group.input-group-lg
-      textarea#theCode.form-control(rows="3", columns="50", name='theCode', type='textarea', placeholder='Output')
+  .container.col-lg-2
+  .container.col-lg-8
+      textarea#theInput.form-control.inputWithMargin(rows="8", name='theCode', type='textarea', placeholder='Input')
+      textarea#theOutput.form-control(rows="8", name='theCode', type='textarea', placeholder='Output')
+
+template(name="theReplacer")
+  .row
+    .col-lg-2
+    .col-lg-4
+      span.input-group-button
+        input.form-control(type="text")
+
+template(name="theHeader")
+  nav.navbar.navbar-default.navbar-static-top
+    span.appTitle Shorthand
+    span.navbar-right
+      +loginButtons

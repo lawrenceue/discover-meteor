@@ -1,11 +1,12 @@
 Template.theInput.events
-  'change .form-control': (event, template) -> 
-   x = template.find('#theCode').value
+  'change #theInput': (event, template) -> 
+   x = template.find('#theInput').value
    console.log(x)
    y = x.split(' ').map (x) ->
        replacer(x, obj1)
    console.log(y.join(' '))
    console.log(Template.theInput.helpers.axe);
+   template.find("#theOutput").value = "ABC"
    return
 
 Template.theInput.helpers
@@ -28,3 +29,5 @@ console.log(arr2)
 
 Template.theInput.helpers
   subs: -> Posts.find({})
+
+document.getElementById("theOutput").value = "Hey!"
