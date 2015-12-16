@@ -8,9 +8,10 @@ Template.theInput.events
    console.log(Template.theInput.helpers.axe);
    template.find("#theOutput").value = "ABC"
    return
-
-Template.theInput.helpers
-  axe: "skerp"
+  'click #replacementAdd': (event, template) ->
+   shorthand = template.find('#theShorthand').value
+   replacement = template.find('#theReplacement').value
+   user = Meteor.user()._id
 
 obj1 = 
   "a":"z"
@@ -28,6 +29,4 @@ arr2 = arr.map (x) ->
 console.log(arr2)
 
 Template.theInput.helpers
-  subs: -> Posts.find({})
-
-document.getElementById("theOutput").value = "Hey!"
+  subs: -> Subs.findOne({})

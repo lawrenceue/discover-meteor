@@ -13,11 +13,11 @@ template(name="theInput")
 template(name="theReplacer")
     .row
      .col-lg-5
-        input.form-control(type="text",placeholder="Shorthand")
+        input#theShorthand.form-control(type="text",placeholder="Shorthand")
      .col-lg-5
-        input.form-control(type="text",placeholder="Replacement")
+        input#theReplacement.form-control(type="text",placeholder="Replacement")
      .btn.btn-sm.btn-success
-      span.glyphicon.glyphicon-plus
+      span#replacementAdd.glyphicon.glyphicon-plus
      
 
 template(name="theHeader")
