@@ -5,7 +5,7 @@ Template.theInput.events
    y = x.split(' ').map (x) ->
        replacer(x, obj1)
    console.log(y.join(' '))
-   console.log()
+   console.log(Template.theInput.helpers.axe);
    return
 
 Template.theInput.helpers
@@ -25,3 +25,6 @@ arrx = []
 arr2 = arr.map (x) ->
    replacer(x, obj1)
 console.log(arr2)
+
+Template.theInput.helpers
+  subs: -> Posts.find({})
